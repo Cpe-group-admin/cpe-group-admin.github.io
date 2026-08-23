@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# 允许 AI 检索抓取，便于在 AI 搜索结果里命中对应语言页
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://cpe-group-admin.github.io/MyNotes/site/sitemap.xml

@@ -199,25 +199,53 @@ p { margin: 0; text-wrap: pretty; }
 .btn--dark { background: var(--ink); color: #fff; box-shadow: 0 12px 28px -12px rgba(42, 26, 13, .8); }
 .btn svg { width: 19px; height: 19px; flex: none; fill: currentColor; }
 
-/* 手机画面：hero 里自动循环播放的演示视频 */
-.phone-demo { position: relative; margin: 0 auto; max-width: 268px; text-align: center; }
-.phone-demo figcaption { display: inline-block; margin-top: 14px; }
-.phone-demo video, .phone-demo img {
-  width: 100%; aspect-ratio: 660 / 1434; border-radius: var(--r-md);
-  box-shadow: var(--shadow-shot); background: var(--o-700);
+/* 手机画面：hero 里自动循环播放的书写演示。视频是从预览图里裁出来的纯屏幕画面，
+   没有机身边框也没有上方大字，所以圆角要和真机屏幕对上。
+   裁切矩形的四角残留一点橘色底，用同一个圆角切掉；宽高比固定，
+   「横向 % / 纵向 %」这种写法算出来仍是正圆角，缩到任何宽度都不走形 */
+.phone-demo { position: relative; margin: 0 auto; max-width: 292px; }
+.phone-demo video {
+  display: block; width: 100%; aspect-ratio: 948 / 2060;
+  border-radius: 12.7% / 5.85%;
+  box-shadow: 0 34px 70px -22px rgba(70, 30, 0, .62), 0 10px 24px -14px rgba(70, 30, 0, .5);
 }
 
 /* ---------- 截图卡片 ---------- */
 
-.shot { border-radius: var(--r-md); box-shadow: var(--shadow-shot); overflow: hidden; }
-.shot img { width: 100%; }
-
-/* 跨页大图：左右两张严丝合缝拼成一整幅 */
-.spread {
-  display: flex; gap: 0; border-radius: var(--r-md); overflow: hidden;
-  box-shadow: var(--shadow-shot); margin-top: 28px;
+/* 特性区块的截图和首屏视频一样，是从预览图里裁出来的纯手机画面。
+   圆角与真机屏幕对齐，把裁切矩形四角残留的橘色底切掉 */
+.shot img {
+  width: 100%; display: block; aspect-ratio: 948 / 2060;
+  border-radius: 12.7% / 5.85%;
+  box-shadow: 0 30px 62px -22px rgba(70, 30, 0, .58), 0 9px 22px -13px rgba(70, 30, 0, .48);
 }
-.spread img { width: 50%; display: block; }
+
+/* iPad 横图：一行一张，占满内容区。iPad 屏幕圆角比手机小得多 */
+.pad-grid { display: grid; gap: 30px; margin-top: 30px; }
+.pad-shot { margin: 0; }
+.pad-shot img {
+  width: 100%; display: block; aspect-ratio: 1956 / 1467;
+  border-radius: 2.3% / 3.07%;
+  box-shadow: 0 30px 62px -22px rgba(70, 30, 0, .58), 0 9px 22px -13px rgba(70, 30, 0, .48);
+}
+.pad-shot figcaption { margin-top: 14px; font-size: .95rem; color: var(--ink-2); }
+.pad-shot figcaption b { display: block; font-weight: 750; color: var(--ink); margin-bottom: 4px; font-size: 1.05rem; }
+
+/* 外接键盘快捷键：这一节的内容本来印在预览图的卡片里，裁掉边框后改用真实文字排 */
+.kb-block { text-align: center; }
+.kb-block > b { font-size: 1.05rem; font-weight: 750; }
+.kb-block > p { margin-top: 4px; font-size: .95rem; color: var(--ink-2); }
+.kb-list { list-style: none; padding: 0; margin: 16px auto 0; display: grid; gap: 8px; max-width: 460px; }
+.kb-list li {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  background: rgba(255, 255, 255, .72); border-radius: var(--r-sm); padding: 9px 14px;
+  font-size: .92rem; text-align: start;
+}
+.kb-list .keys { display: flex; gap: 6px; flex: none; }
+.kb-list kbd {
+  font: inherit; font-weight: 700; font-size: .84rem; min-width: 26px; text-align: center;
+  background: var(--ink); color: #fff; border-radius: 7px; padding: 3px 8px;
+}
 
 /* 图文并排区块 */
 .split { display: grid; grid-template-columns: 1fr; gap: 26px; align-items: center; }
@@ -229,12 +257,25 @@ p { margin: 0; text-wrap: pretty; }
 .split h2 { font-size: clamp(1.5rem, 3.6vw, 2rem); font-weight: 800; }
 .split .lead { margin-top: 14px; }
 
+/* 区块图标：与特性卡片同一套线性描边字形，放在标题上方 */
+.sec__ico {
+  width: 42px; height: 42px; border-radius: 13px; margin-bottom: 14px;
+  display: grid; place-items: center; background: var(--ink);
+  box-shadow: 0 10px 22px -12px rgba(42, 26, 13, .8);
+}
+.sec__ico svg {
+  width: 22px; height: 22px; fill: none; stroke: #fff;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+
 /* ---------- 调色板 ---------- */
 
 .swatches {
   display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px;
-  max-width: 420px; margin: 26px auto 0;
+  max-width: 420px; margin: 18px 0 0;
 }
+.sec--center .swatches { margin-left: auto; margin-right: auto; }
+.palette-note { margin-top: 14px; font-size: .92rem; color: var(--ink-2); }
 .swatch {
   aspect-ratio: 1; border-radius: var(--r-sm);
   border: 1.5px solid rgba(255, 255, 255, .5);
@@ -242,9 +283,6 @@ p { margin: 0; text-wrap: pretty; }
   transition: transform .18s ease;
 }
 .swatch:hover { transform: translateY(-4px) scale(1.06); }
-
-.color-line { margin-top: 26px; font-size: clamp(1.35rem, 4vw, 1.9rem); font-weight: 800; line-height: 1.35; }
-.color-line em { font-style: normal; }
 
 /* ---------- 特性网格 ---------- */
 
@@ -440,6 +478,16 @@ p { margin: 0; text-wrap: pretty; }
   opacity: 0; pointer-events: none; transition: opacity .22s ease, transform .22s ease;
 }
 .toast.is-on { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ---------- 右起语言（阿拉伯语 / 希伯来语 / 乌尔都语） ---------- */
+
+/* 版面由 dir="rtl" 自动镜像，这里只补几处写死了左右的地方 */
+[dir="rtl"] .share-btn { text-align: right; }
+[dir="rtl"] .inline-share .rail__title { text-align: right; }
+[dir="rtl"] .faq summary { text-align: right; }
+[dir="rtl"] .dock .btn { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .lang-picker select { padding-left: 30px; padding-right: 12px; }
+[dir="rtl"] .lang-picker::after { right: auto; left: 13px; }
 
 /* 可访问性：仅供读屏 */
 .sr-only {

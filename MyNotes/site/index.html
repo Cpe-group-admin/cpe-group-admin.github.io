@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Minimal Notes — A free, instant notepad for iPhone</title>
-<meta name="description" content="Minimal Notes is a completely free notepad for iPhone that is ready the instant you open it. Jot down ideas and daily to-dos, write in 12 colors, search instantly and switch to Dark Mode — no account, no set-up. Choose your language.">
+<title>Mini Notes — Simple To-Do List & Easy Memos</title>
+<meta name="description" content="If you want a notes app that's “open and write, tidy as you go, never lose a word,” Mini Notes is built for you. Choose your language.">
 <link rel="canonical" href="https://cpe-group-admin.github.io/MyNotes/site/">
 <link rel="alternate" hreflang="en" href="https://cpe-group-admin.github.io/MyNotes/site/en/">
 <link rel="alternate" hreflang="zh-Hans" href="https://cpe-group-admin.github.io/MyNotes/site/zh/">
@@ -21,6 +21,41 @@
 <link rel="alternate" hreflang="es" href="https://cpe-group-admin.github.io/MyNotes/site/es/">
 <link rel="alternate" hreflang="ru" href="https://cpe-group-admin.github.io/MyNotes/site/ru/">
 <link rel="alternate" hreflang="en-AU" href="https://cpe-group-admin.github.io/MyNotes/site/en-au/">
+<link rel="alternate" hreflang="ar" href="https://cpe-group-admin.github.io/MyNotes/site/ar/">
+<link rel="alternate" hreflang="fr-CA" href="https://cpe-group-admin.github.io/MyNotes/site/fr-ca/">
+<link rel="alternate" hreflang="en-CA" href="https://cpe-group-admin.github.io/MyNotes/site/en-ca/">
+<link rel="alternate" hreflang="nl" href="https://cpe-group-admin.github.io/MyNotes/site/nl/">
+<link rel="alternate" hreflang="tr" href="https://cpe-group-admin.github.io/MyNotes/site/tr/">
+<link rel="alternate" hreflang="th" href="https://cpe-group-admin.github.io/MyNotes/site/th/">
+<link rel="alternate" hreflang="vi" href="https://cpe-group-admin.github.io/MyNotes/site/vi/">
+<link rel="alternate" hreflang="id" href="https://cpe-group-admin.github.io/MyNotes/site/id/">
+<link rel="alternate" hreflang="sv" href="https://cpe-group-admin.github.io/MyNotes/site/sv/">
+<link rel="alternate" hreflang="pl" href="https://cpe-group-admin.github.io/MyNotes/site/pl/">
+<link rel="alternate" hreflang="ta" href="https://cpe-group-admin.github.io/MyNotes/site/ta/">
+<link rel="alternate" hreflang="te" href="https://cpe-group-admin.github.io/MyNotes/site/te/">
+<link rel="alternate" hreflang="mr" href="https://cpe-group-admin.github.io/MyNotes/site/mr/">
+<link rel="alternate" hreflang="ur" href="https://cpe-group-admin.github.io/MyNotes/site/ur/">
+<link rel="alternate" hreflang="bn" href="https://cpe-group-admin.github.io/MyNotes/site/bn/">
+<link rel="alternate" hreflang="da" href="https://cpe-group-admin.github.io/MyNotes/site/da/">
+<link rel="alternate" hreflang="no" href="https://cpe-group-admin.github.io/MyNotes/site/no/">
+<link rel="alternate" hreflang="fi" href="https://cpe-group-admin.github.io/MyNotes/site/fi/">
+<link rel="alternate" hreflang="he" href="https://cpe-group-admin.github.io/MyNotes/site/he/">
+<link rel="alternate" hreflang="el" href="https://cpe-group-admin.github.io/MyNotes/site/el/">
+<link rel="alternate" hreflang="ms" href="https://cpe-group-admin.github.io/MyNotes/site/ms/">
+<link rel="alternate" hreflang="gu" href="https://cpe-group-admin.github.io/MyNotes/site/gu/">
+<link rel="alternate" hreflang="kn" href="https://cpe-group-admin.github.io/MyNotes/site/kn/">
+<link rel="alternate" hreflang="ml" href="https://cpe-group-admin.github.io/MyNotes/site/ml/">
+<link rel="alternate" hreflang="pa" href="https://cpe-group-admin.github.io/MyNotes/site/pa/">
+<link rel="alternate" hreflang="cs" href="https://cpe-group-admin.github.io/MyNotes/site/cs/">
+<link rel="alternate" hreflang="hu" href="https://cpe-group-admin.github.io/MyNotes/site/hu/">
+<link rel="alternate" hreflang="uk" href="https://cpe-group-admin.github.io/MyNotes/site/uk/">
+<link rel="alternate" hreflang="ro" href="https://cpe-group-admin.github.io/MyNotes/site/ro/">
+<link rel="alternate" hreflang="pt-PT" href="https://cpe-group-admin.github.io/MyNotes/site/pt-pt/">
+<link rel="alternate" hreflang="sk" href="https://cpe-group-admin.github.io/MyNotes/site/sk/">
+<link rel="alternate" hreflang="ca" href="https://cpe-group-admin.github.io/MyNotes/site/ca/">
+<link rel="alternate" hreflang="hr" href="https://cpe-group-admin.github.io/MyNotes/site/hr/">
+<link rel="alternate" hreflang="sl" href="https://cpe-group-admin.github.io/MyNotes/site/sl/">
+<link rel="alternate" hreflang="or" href="https://cpe-group-admin.github.io/MyNotes/site/or/">
 <link rel="alternate" hreflang="x-default" href="https://cpe-group-admin.github.io/MyNotes/site/en/">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
 <link rel="apple-touch-icon" href="assets/img/icon-180.png">
@@ -30,29 +65,30 @@
   body{margin:0;min-height:100vh;display:grid;place-items:center;padding:32px 20px;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",Roboto,Arial,sans-serif;
     color:#2a1a0d;background:linear-gradient(180deg,#fc7e11,#fea64b 35%,#ffe0bb 70%,#fffaf4)}
-  .box{width:100%;max-width:400px;text-align:center}
+  .box{width:100%;max-width:440px;text-align:center}
   .box img{width:76px;height:76px;border-radius:20px;box-shadow:0 14px 30px -12px rgba(60,25,0,.7)}
   h1{font-size:1.35rem;margin:16px 0 4px;color:#fff}
   p{margin:0;color:rgba(255,255,255,.9);font-size:.92rem}
-  ul{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:9px}
+  ul{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:8px;
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
   a{display:flex;align-items:center;justify-content:space-between;gap:10px;
-    background:#fff;border-radius:14px;padding:13px 17px;text-decoration:none;color:#2a1a0d;
+    background:#fff;border-radius:14px;padding:12px 15px;text-decoration:none;color:#2a1a0d;
     font-weight:700;box-shadow:0 10px 24px -12px rgba(80,40,5,.6)}
-  a span{font-weight:500;color:#8a7361;font-size:.86rem}
+  a span{font-weight:500;color:#8a7361;font-size:.82rem}
 </style>
 </head>
 <body>
 <div class="box">
-  <img src="assets/img/icon-180.png" alt="Minimal Notes">
-  <h1>Minimal Notes</h1>
+  <img src="assets/img/icon-180.png" alt="Mini Notes">
+  <h1>Mini Notes</h1>
   <p>Choose your language / 选择语言</p>
-  <ul><li><a href="en/index.html" hreflang="en" lang="en-US">English (US)<span>Minimal Notes</span></a></li><li><a href="zh/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文<span>极简备忘</span></a></li><li><a href="ja/index.html" hreflang="ja" lang="ja">日本語<span>ミニメモ</span></a></li><li><a href="en-gb/index.html" hreflang="en-GB" lang="en-GB">English (UK)<span>Minimal Notes</span></a></li><li><a href="de/index.html" hreflang="de" lang="de-DE">Deutsch<span>Minimal Notes</span></a></li><li><a href="fr/index.html" hreflang="fr" lang="fr-FR">Français<span>Notes Minimal</span></a></li><li><a href="es-mx/index.html" hreflang="es-MX" lang="es-MX">Español (México)<span>Notas Mínimas</span></a></li><li><a href="pt-br/index.html" hreflang="pt-BR" lang="pt-BR">Português (BR)<span>Notas Mínimas</span></a></li><li><a href="hi/index.html" hreflang="hi" lang="hi">हिन्दी<span>मिनिमल नोट्स</span></a></li><li><a href="zh-hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文<span>極簡備忘</span></a></li><li><a href="ko/index.html" hreflang="ko" lang="ko">한국어<span>미니멀 노트</span></a></li><li><a href="it/index.html" hreflang="it" lang="it-IT">Italiano<span>Note Minimal</span></a></li><li><a href="es/index.html" hreflang="es" lang="es-ES">Español (España)<span>Notas Mínimas</span></a></li><li><a href="ru/index.html" hreflang="ru" lang="ru">Русский<span>Минимал Заметки</span></a></li><li><a href="en-au/index.html" hreflang="en-AU" lang="en-AU">English (AU)<span>Minimal Notes</span></a></li></ul>
+  <ul><li><a href="en/index.html" hreflang="en" lang="en-US">English (US)<span>Mini Notes</span></a></li><li><a href="zh/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文<span>极简笔记</span></a></li><li><a href="ja/index.html" hreflang="ja" lang="ja">日本語<span>ミニメモ</span></a></li><li><a href="en-gb/index.html" hreflang="en-GB" lang="en-GB">English (UK)<span>Mini Notes</span></a></li><li><a href="de/index.html" hreflang="de" lang="de-DE">Deutsch<span>Mini Notizen</span></a></li><li><a href="fr/index.html" hreflang="fr" lang="fr-FR">Français<span>Mini Notes</span></a></li><li><a href="es-mx/index.html" hreflang="es-MX" lang="es-MX">Español (México)<span>Mini Notas</span></a></li><li><a href="pt-br/index.html" hreflang="pt-BR" lang="pt-BR">Português (BR)<span>Mini Notas</span></a></li><li><a href="hi/index.html" hreflang="hi" lang="hi">हिन्दी<span>मिनी नोट्स</span></a></li><li><a href="zh-hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文<span>極簡筆記</span></a></li><li><a href="ko/index.html" hreflang="ko" lang="ko">한국어<span>미니 노트</span></a></li><li><a href="it/index.html" hreflang="it" lang="it">Italiano<span>Mini Note</span></a></li><li><a href="es/index.html" hreflang="es" lang="es-ES">Español (España)<span>Mini Notas</span></a></li><li><a href="ru/index.html" hreflang="ru" lang="ru">Русский<span>Мини-заметки</span></a></li><li><a href="en-au/index.html" hreflang="en-AU" lang="en-AU">English (AU)<span>Mini Notes</span></a></li><li><a href="ar/index.html" hreflang="ar" lang="ar">العربية<span>ملاحظات مصغّرة</span></a></li><li><a href="fr-ca/index.html" hreflang="fr-CA" lang="fr-CA">Français (CA)<span>Mini Notes</span></a></li><li><a href="en-ca/index.html" hreflang="en-CA" lang="en-CA">English (CA)<span>Mini Notes</span></a></li><li><a href="nl/index.html" hreflang="nl" lang="nl-NL">Nederlands<span>Mini Notities</span></a></li><li><a href="tr/index.html" hreflang="tr" lang="tr">Türkçe<span>Mini Notlar</span></a></li><li><a href="th/index.html" hreflang="th" lang="th">ไทย<span>มินิโน้ต</span></a></li><li><a href="vi/index.html" hreflang="vi" lang="vi">Tiếng Việt<span>Ghi Chú Mini</span></a></li><li><a href="id/index.html" hreflang="id" lang="id">Bahasa Indonesia<span>Catatan Mini</span></a></li><li><a href="sv/index.html" hreflang="sv" lang="sv">Svenska<span>Mini Notes</span></a></li><li><a href="pl/index.html" hreflang="pl" lang="pl">Polski<span>Mini Notatki</span></a></li><li><a href="ta/index.html" hreflang="ta" lang="ta">தமிழ்<span>மினி நோட்ஸ்</span></a></li><li><a href="te/index.html" hreflang="te" lang="te">తెలుగు<span>మినీ నోట్స్</span></a></li><li><a href="mr/index.html" hreflang="mr" lang="mr">मराठी<span>मिनी नोट्स</span></a></li><li><a href="ur/index.html" hreflang="ur" lang="ur">اردو<span>منی نوٹس</span></a></li><li><a href="bn/index.html" hreflang="bn" lang="bn">বাংলা<span>মিনি নোটস</span></a></li><li><a href="da/index.html" hreflang="da" lang="da">Dansk<span>Mini Noter</span></a></li><li><a href="no/index.html" hreflang="no" lang="nb-NO">Norsk<span>Mininotater</span></a></li><li><a href="fi/index.html" hreflang="fi" lang="fi">Suomi<span>Mini Notes</span></a></li><li><a href="he/index.html" hreflang="he" lang="he">עברית<span>מיני הערות</span></a></li><li><a href="el/index.html" hreflang="el" lang="el">Ελληνικά<span>Μίνι σημειώσεις</span></a></li><li><a href="ms/index.html" hreflang="ms" lang="ms">Bahasa Melayu<span>Nota Mini</span></a></li><li><a href="gu/index.html" hreflang="gu" lang="gu">ગુજરાતી<span>મિની નોટ્સ</span></a></li><li><a href="kn/index.html" hreflang="kn" lang="kn">ಕನ್ನಡ<span>ಮಿನಿ ನೋಟ್ಸ್</span></a></li><li><a href="ml/index.html" hreflang="ml" lang="ml">മലയാളം<span>മിനി നോട്ട്സ്</span></a></li><li><a href="pa/index.html" hreflang="pa" lang="pa">ਪੰਜਾਬੀ<span>ਮਿਨੀ ਨੋਟਸ</span></a></li><li><a href="cs/index.html" hreflang="cs" lang="cs">Čeština<span>Mini poznámky</span></a></li><li><a href="hu/index.html" hreflang="hu" lang="hu">Magyar<span>Mini Jegyzetek</span></a></li><li><a href="uk/index.html" hreflang="uk" lang="uk">Українська<span>Мінінотатки</span></a></li><li><a href="ro/index.html" hreflang="ro" lang="ro">Română<span>Mini Notițe</span></a></li><li><a href="pt-pt/index.html" hreflang="pt-PT" lang="pt-PT">Português (PT)<span>Mini Notas</span></a></li><li><a href="sk/index.html" hreflang="sk" lang="sk">Slovenčina<span>Mini poznámky</span></a></li><li><a href="ca/index.html" hreflang="ca" lang="ca">Català<span>Mini Notes</span></a></li><li><a href="hr/index.html" hreflang="hr" lang="hr">Hrvatski<span>Mini bilješke</span></a></li><li><a href="sl/index.html" hreflang="sl" lang="sl">Slovenščina<span>Mini zapiski</span></a></li><li><a href="or/index.html" hreflang="or" lang="or">ଓଡ଼ିଆ<span>ମିନି ନୋଟ୍ସ</span></a></li></ul>
 </div>
 <script>
 (function(){
   var pre = "";
-  var map = {"en":"en", "zh-hans":"zh", "ja":"ja", "en-gb":"en-gb", "de":"de", "fr":"fr", "es-mx":"es-mx", "pt-br":"pt-br", "hi":"hi", "zh-hant":"zh-hant", "ko":"ko", "it":"it", "es":"es", "ru":"ru", "en-au":"en-au"};
-  var alias = {"en-hk":"en-gb", "en-ie":"en-gb", "en-in":"en-gb", "en-ke":"en-gb", "en-my":"en-gb", "en-ng":"en-gb", "en-nz":"en-au", "en-sg":"en-gb", "en-za":"en-gb", "es-419":"es-mx", "es-ar":"es-mx", "es-bo":"es-mx", "es-cl":"es-mx", "es-co":"es-mx", "es-cr":"es-mx", "es-cu":"es-mx", "es-do":"es-mx", "es-ec":"es-mx", "es-gt":"es-mx", "es-hn":"es-mx", "es-ni":"es-mx", "es-pa":"es-mx", "es-pe":"es-mx", "es-pr":"es-mx", "es-py":"es-mx", "es-sv":"es-mx", "es-us":"es-mx", "es-uy":"es-mx", "es-ve":"es-mx", "pt-pt":"pt-br"};                 // 地区码显式指路，见构建脚本注释
+  var map = {"en":"en", "zh-hans":"zh", "ja":"ja", "en-gb":"en-gb", "de":"de", "fr":"fr", "es-mx":"es-mx", "pt-br":"pt-br", "hi":"hi", "zh-hant":"zh-hant", "ko":"ko", "it":"it", "es":"es", "ru":"ru", "en-au":"en-au", "ar":"ar", "fr-ca":"fr-ca", "en-ca":"en-ca", "nl":"nl", "tr":"tr", "th":"th", "vi":"vi", "id":"id", "sv":"sv", "pl":"pl", "ta":"ta", "te":"te", "mr":"mr", "ur":"ur", "bn":"bn", "da":"da", "no":"no", "fi":"fi", "he":"he", "el":"el", "ms":"ms", "gu":"gu", "kn":"kn", "ml":"ml", "pa":"pa", "cs":"cs", "hu":"hu", "uk":"uk", "ro":"ro", "pt-pt":"pt-pt", "sk":"sk", "ca":"ca", "hr":"hr", "sl":"sl", "or":"or"};
+  var alias = {"bn-in":"bn", "de-at":"de", "de-ch":"de", "en-hk":"en-gb", "en-ie":"en-gb", "en-in":"en-gb", "en-ke":"en-gb", "en-my":"en-gb", "en-ng":"en-gb", "en-nz":"en-au", "en-sg":"en-gb", "en-za":"en-gb", "es-419":"es-mx", "es-ar":"es-mx", "es-bo":"es-mx", "es-cl":"es-mx", "es-co":"es-mx", "es-cr":"es-mx", "es-cu":"es-mx", "es-do":"es-mx", "es-ec":"es-mx", "es-gt":"es-mx", "es-hn":"es-mx", "es-ni":"es-mx", "es-pa":"es-mx", "es-pe":"es-mx", "es-pr":"es-mx", "es-py":"es-mx", "es-sv":"es-mx", "es-us":"es-mx", "es-uy":"es-mx", "es-ve":"es-mx", "fr-be":"fr", "fr-ch":"fr", "nb-no":"no", "nl-be":"nl", "nn-no":"no", "ur-in":"ur"};                 // 地区码显式指路，见构建脚本注释
   var go = function(code){ location.replace(pre + code + "/index.html"); };
   var langs = (navigator.languages && navigator.languages.length)
       ? navigator.languages : [navigator.language || "en"];
@@ -70,7 +106,7 @@
     if (alias[tag]) { go(alias[tag]); return; }
     var base = tag.split("-")[0];
     if (map[base]) { go(map[base]); return; }
-    // 同语族兜底：pt-PT 没有精确匹配，就落到 pt-BR，而不是掉去英文
+    // 同语族兜底：没有精确匹配时落到同一语言的另一个地区版，而不是掉去英文
     for (var key in map) {
       if (key.split("-")[0] === base) { go(map[key]); return; }
     }
